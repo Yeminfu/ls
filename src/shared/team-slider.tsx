@@ -7,12 +7,24 @@ import { VolunteerCard } from "@/src/shared/volunteer-card";
 
 export function TeamSlider() {
   const trackRef = useRef<HTMLDivElement>(null);
-
-  const scrollByView = (direction: 1 | -1) => {
-    const track = trackRef.current;
-    if (!track) return;
-    track.scrollBy({ left: direction * track.clientWidth, behavior: "smooth" });
-  };
+     const scrollByView = (direction: 1 | -1) => {                                                 
+       const track = trackRef.current;                                                             
+       if (!track) return;                                                                         
+       const cards = Array.from(track.children) as HTMLElement[];                                  
+       if (!cards.length) return;                                                                  
+                                                                                                   
+       const step = cards[0].offsetWidth + 24; // gap-6 = 24px                                     
+       const current = Math.round(track.scrollLeft / step);                                        
+       const next = Math.max(0, Math.min(cards.length - 1, current + direction));                  
+                                                                                                   
+       track.style.scrollSnapType = "none"; // ключевое: убрать snap на время скролла              
+       track.scrollTo({ left: next * step, behavior: "smooth" });                                  
+       track.addEventListener(                                                                     
+         "scrollend",                                                                              
+         () => { track.style.scrollSnapType = ""; },                                               
+         { once: true }                                                                            
+       );                                                                                          
+     };           
 
   return (
     <div className="relative">
