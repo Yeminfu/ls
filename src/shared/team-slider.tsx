@@ -46,7 +46,7 @@ export function TeamSlider() {
         type="button"
         onClick={() => scrollByView(-1)}
         aria-label="Предыдущие волонтёры"
-        className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-lg transition hover:text-orange-600 sm:-left-5"
+        className="absolute left-2 top-[280px] flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-lg transition hover:text-orange-600 sm:-left-5"
       >
         <ChevronLeftIcon className="h-5 w-5" />
       </button>
@@ -55,8 +55,7 @@ export function TeamSlider() {
         type="button"
         onClick={() => scrollByView(1)}
         aria-label="Следующие волонтёры"
-        className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-lg transition hover:text-orange-600 sm:-right-5"
-      >
+        className="absolute right-2 top-[280px] flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600  shadow-lg transition hover:text-orange-600 sm:-right-5" >
         <ChevronRightIcon className="h-5 w-5" />
       </button>
     </div>
