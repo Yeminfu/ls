@@ -30,7 +30,7 @@ export default function Home() {
             помогают людям в критических ситуациях.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          {/* <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <button className="rounded-2xl bg-white px-8 py-4 text-sm font-bold text-orange-600 shadow-xl transition hover:scale-[1.02] hover:bg-orange-50">
               Сообщить о пропаже
             </button>
@@ -38,7 +38,7 @@ export default function Home() {
             <button className="rounded-2xl border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20">
               Стать волонтёром
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
