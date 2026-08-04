@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TeamSlider } from "@/src/shared/team-slider";
 import { Cause } from "./components/cause";
 import { CAUSES } from "./data/causes.data";
 
@@ -69,50 +70,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="py-10">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
-              Команда
-            </p>
+      <section aria-label="Команда" className="scroll-mt-20 py-20">
+        <div className="mb-12 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
+            Команда
+          </p>
 
-            <h2 className="mt-3 text-4xl font-black text-slate-900">
-              Люди, которые спасают жизни
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {TEAM.map((teammate, i) => {
-              return (
-                <div
-                  key={i}
-                  className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                >
-                  <div className="overflow-hidden">
-                    <Image
-                      src={teammate.image}
-                      alt={teammate.name}
-                      width={600}
-                      height={320}
-                      className="h-[320px] w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-                  </div>
-
-                  <div className="p-8">
-                    <div className="text-2xl font-bold text-slate-900">
-                      {teammate.name}
-                    </div>
-
-                    <p className="mt-4 leading-7 text-slate-600">
-                      {teammate.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <h2 className="mt-2 text-4xl font-black text-slate-900">
+            Люди, которые спасают жизни
+          </h2>
         </div>
-      </section> */}
+
+        <TeamSlider />
+      </section>
 
       {/* <section className="py-24">
         <div className="rounded-[32px] bg-gradient-to-r from-blue-700 via-blue-600 to-orange-500 px-8 py-16 text-center text-white shadow-2xl sm:px-16">
