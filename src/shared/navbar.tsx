@@ -27,7 +27,7 @@ export default function Navbar() {
         {/* Левый блок */}
         <div className="flex items-center">
           {/* Десктопное меню */}
-          <div className="hidden items-center gap-6 md:flex">
+          {/* <div className="hidden items-center gap-6 md:flex">
             {menuItems.map((item) => (
               <Link
                 key={item.link}
@@ -37,10 +37,10 @@ export default function Navbar() {
                 {item.text}
               </Link>
             ))}
-          </div>
+          </div> */}
 
           {/* Бургер */}
-          <button
+          {/* <button
             aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
             className="relative h-6 w-6 md:hidden"
             onClick={() => setIsOpen((prev) => !prev)}
@@ -62,7 +62,7 @@ export default function Navbar() {
                 isOpen ? "top-3 -rotate-45" : "top-5"
               }`}
             />
-          </button>
+          </button> */}
         </div>
 
         {/* Правый блок */}
