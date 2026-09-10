@@ -32,10 +32,10 @@ function MaxIcon({ className }: { className?: string }) {
 }
 
 const SOCIALS = [
-  { label: "ВКонтакте", href: "https://vk.com/ligaspas", Icon: FaVk },
-  { label: "Одноклассники", href: "https://ok.ru/ligaspas", Icon: FaOdnoklassniki },
-  { label: "Telegram", href: "https://t.me/ligaspas", Icon: FaTelegramPlane },
-  { label: "Max", href: "https://max.ru/id2724250231_biz", Icon: MaxIcon },
+  { label: "ВКонтакте", href: "https://vk.com/ligaspas", Icon: FaVk, color: "#0077FF" },
+  { label: "Одноклассники", href: "https://ok.ru/ligaspas", Icon: FaOdnoklassniki, color: "#EE8208" },
+  { label: "Telegram", href: "https://t.me/ligaspas", Icon: FaTelegramPlane, color: "#229ED9" },
+  { label: "Max", href: "https://max.ru/id2724250231_biz", Icon: MaxIcon, color: undefined },
 ];
 
 export function Footer() {
@@ -128,15 +128,15 @@ export function Footer() {
           </ul>
 
           <div className="mt-5 flex flex-wrap gap-3">
-            {SOCIALS.map(({ label, href, Icon }) => (
+            {SOCIALS.map(({ label, href, Icon, color }) => (
               <a
                 key={label}
                 href={href}
                 aria-label={label}
                 title={label}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-700 text-slate-400 transition-all hover:-translate-y-0.5 hover:border-orange-400 hover:text-orange-400"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-700 transition-all hover:-translate-y-0.5 hover:border-orange-400"
               >
-                <Icon className="h-5 w-5" />
+                <Icon className="h-5 w-5" style={color ? { color } : undefined} />
               </a>
             ))}
           </div>
