@@ -1,3 +1,4 @@
+import { Footer } from "@/src/shared/footer";
 import { Header } from "@/src/shared/header";
 import type { Metadata } from "next";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           {children}
         </div>
       </main>
+      <Footer />
     </body>
   );
 }
